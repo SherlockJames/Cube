@@ -1,0 +1,200 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background: black;
+}
+.box {
+  height: 300px;
+  width: 300px;
+  positio: ;
+  n: absolute;
+  left: 0;
+  right: 0;
+  margin: 100px auto 0;
+  transform-style: preserve-3d;
+  transform: rotateX(-30deg) rotateY(-30deg) rotateZ(0deg);
+  opacity: 1;
+}
+.box ul {
+  list-style: none;
+  height: 300px;
+  width: 300px;
+  position: absolute;
+  transform-style: preserve-3d;
+}
+.box ul li {
+  height: 100px;
+  width: 100px;
+  float: left;
+  position: absolute;
+  transform-style: preserve-3d;
+  text-align: center;
+  transform-origin: 152px 152px -150px;
+  transform: translateZ(152px);
+  line-height: 100px;
+  border: 10px dashed rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+}
+.box ul li:nth-child(1) {
+  transform: translateZ(150px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) translateX(0px) translateY(0px);
+}
+.box ul li:nth-child(2) {
+  transform: translateZ(150px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) translateX(100px) translateY(0px);
+}
+.box ul li:nth-child(3) {
+  transform: translateZ(150px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) translateX(200px) translateY(0px);
+}
+.box ul li:nth-child(4) {
+  transform: translateZ(150px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) translateX(0px) translateY(100px);
+}
+.box ul li:nth-child(5) {
+  transform: translateZ(150px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) translateX(100px) translateY(100px);
+}
+.box ul li:nth-child(6) {
+  transform: translateZ(150px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) translateX(200px) translateY(100px);
+}
+.box ul li:nth-child(7) {
+  transform: translateZ(150px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) translateX(0px) translateY(200px);
+}
+.box ul li:nth-child(8) {
+  transform: translateZ(150px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) translateX(100px) translateY(200px);
+}
+.box ul li:nth-child(9) {
+  transform: translateZ(150px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) translateX(200px) translateY(200px);
+}
+.f1 > li {
+  background: blue;
+}
+.f2 > li {
+  background: red;
+}
+.f3 > li {
+  background: white;
+}
+.f4 > li {
+  background: yellow;
+}
+.f5 > li {
+  background: orange;
+}
+.f6 > li {
+  background: green;
+}
+.f2 {
+  transform: rotateY(90deg);
+}
+.f3 {
+  transform: rotateX(-90deg);
+}
+.f4 {
+  transform: rotateX(90deg);
+}
+.f5 {
+  transform: rotateY(-90deg);
+}
+.f6 {
+  transform: rotateY(180deg);
+}
+.gongshi {
+  height: 30px;
+  width: 200px;
+  font-size: 20px;
+  line-height: 30px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 200px auto 0;
+  outline: none;
+}
+.move {
+  height: 50px;
+  width: 120px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 201px auto 0;
+  transform: translateX(0px);
+}
+img {
+  position: absolute;
+}
+img:nth-child(1) {
+  left: 50px;
+  top: 50px;
+}
+img:nth-child(2) {
+  left: 50px;
+  top: 250px;
+}
+img:nth-child(3) {
+  left: 50px;
+  top: 450px;
+}
+img:nth-child(4) {
+  left: 1200px;
+  top: 50px;
+}
+img:nth-child(5) {
+  left: 1200px;
+  top: 250px;
+}
+img:nth-child(6) {
+  left: 1200px;
+  top: 450px;
+}
+button {
+  height: 50px;
+  width: 100px;
+  position: absolute;
+}
+.U {
+  left: 250px;
+  top: 170px;
+}
+.U1 {
+  left: 450px;
+  top: 170px;
+}
+.L {
+  left: 250px;
+  top: 370px;
+}
+.L1 {
+  left: 450px;
+  top: 370px;
+}
+.F {
+  left: 250px;
+  top: 570px;
+}
+.F1 {
+  left: 450px;
+  top: 570px;
+}
+.B {
+  left: 1295px;
+  top: 170px;
+}
+.B1 {
+  left: 1495px;
+  top: 170px;
+}
+.R {
+  left: 1295px;
+  top: 370px;
+}
+.R1 {
+  left: 1495px;
+  top: 370px;
+}
+.D {
+  left: 1295px;
+  top: 570px;
+}
+.D1 {
+  left: 1495px;
+  top: 570px;
+}
+/*# sourceMappingURL=test.css.map */

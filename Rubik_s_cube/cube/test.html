@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+				border: 0;
+			}
+			html,body{
+				background: black;
+				height:100%;
+				overflow: hidden;
+			}
+			.down{
+				position: absolute;
+				transform: rotate(-90deg) translateX(0px);
+				color:green;
+				transform-origin: 0px 0px;
+				top:0;
+				transition: all 8s;
+				font-weight: bolder;
+			}
+		 }
+		</style>
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+			var num=0
+		setInterval(function(){
+			
+			for(var k=0;k<5;k++){
+				Creat();//一次创建五个
+			}
+			$(".down").each(function(index,shi){//循环查找，超出屏幕则删除对应元素
+				if(parseInt($(".down").eq(index).css("top"))>1500){
+					$(".down").eq(index).remove();
+				}
+			})
+	
+		},100)
+		
+	  function Creat(){
+	  	var lang=parseInt(5+15*Math.random())//随机长度
+	  	var font=parseInt(12+80*Math.random())//随机字体
+	  	var opcs=0.2+Math.random()//随机透明度
+	  	var tran=parseInt(5+15*Math.random())//随机移动速度
+		var le=parseInt($(window).innerWidth()*Math.random())//随机left值
+		
+		var zi="";//新字符串
+		for(var i=0;i<lang;i++){//随机0.1
+			var nu=parseInt(101*Math.random())
+			if(nu>50){
+			zi+="1";
+			}else{
+			zi+="0";
+			}
+		}
+		$("<p class='down x"+num+"'>"+zi+"</p>").css("font-size",font+"px").css("opacity",opcs).css("transition","all "+tran+"s").appendTo($("body"));
+		//新建p标签,添加共有类名和不用类名，长度赋值，字符串填充，透明度赋值，速度赋值，添加到body,
+		
+		$(".x"+num).css("top",$(window).innerHeight()+$(".x"+num).width()+1000+"px").css("left",le+"px")
+		//设置动画最终位置，left位置
+		
+		num++;//新类名+1
+	  }
+	</script>
+</html>

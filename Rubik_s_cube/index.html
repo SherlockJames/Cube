@@ -1,0 +1,831 @@
+<!--<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			
+		</style>
+	</head>
+	<body>
+		<nav></nav>
+		<figure></figure>
+		<mark></mark>
+		<canvas></canvas>
+		<time></time>
+		<command />
+		
+		<input type="text" list="biaodan">
+		<datalist id="biaodan"> 
+		 <option value="js">js</option>
+		 <option value="jquery">jquery</option>
+		 <option value="java">java</option>
+		 <option value="html">html</option>
+		</datalist>
+		
+		<form action="" oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+		<input type="number" max=100 id="a" value=50 />+ 
+		<input type="number" max=100 id="b" value=50 />=
+		<output id="x"></output>
+		</form>
+
+		<menu></menu>
+		<video src="">
+			<source></source>
+		</video>
+		<audio src=""></audio>
+		
+		
+		
+		
+	</body>
+	<script>
+		  var i=20;
+		  for(var i=0;i<5;i++){
+		  	setInterval=(function(){
+		  		alert(i);
+		  	},0)
+		  	
+		  }
+		  console.log(i);
+		  
+	</script>
+</html>-->
+
+<!--<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form>
+		<input type="email" required="" multiple>邮箱文本框，@前后有字符
+		<input type="submit">
+			</form>
+		<form>
+		<input type="url" required="">地址文本框，:号前有字符，不能是数字
+		<input type="submit">
+			</form>
+		<form>
+		<input type="number" max="550" min="0" step="25" required="">数值文本框，只能输入数字，可以设置最大(max)/最小值(min)和速度(step)
+		<input type="submit">required：不能为空
+			</form>
+		<form>
+		<input type="text" value="" id="sd">
+		<input type="range" id="fs" style="width:500px;" max="20" min="0">邮箱文本框
+		<input type="submit">
+			</form>
+	</body>
+	<script>
+		var ds=document.getElementById("sd");
+		var fs=document.getElementById("fs");
+		
+		var s=setInterval(function(){
+			
+		var er=new Date();
+			ds.value=er;
+			fs.value++;
+			if(fs.value==20){
+				ff();
+			}
+		},1000)
+		
+		
+		function ff(){
+		var v=setInterval(function(){
+			
+				clearsetInterval;
+		var er=new Date();
+			ds.value=er;
+			fs.value--;
+			if(fs.value==1){
+				s;
+				clearsetInterval(v);
+				return;
+			}
+		},1000)}
+		
+		
+	</script>
+</html>-->
+
+<!--<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding:0;
+				margin:0;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="range" id="one" max="255" min="0" /><span>128</span>
+		<input type="range" id="two" max="255" min="0" /><span>128</span>
+		<input type="range" id="three" max="255" min="0" /><span>128</span>
+		<input type="range" id="four" max="1" value="0.5" step="0.1" /><span>0.5</span>
+	</body>
+	<script>
+		var ine=document.querySelectorAll("input");
+		
+		
+		function st(){
+		var one=ine[0].value;
+		var two=ine[1].value;
+		var three=ine[2].value;
+		var four=ine[3].value;
+			document.body.style.background="rgba("+one+","+two+","+three+","+four+")";
+		}
+		for(var i=0;i<ine.length;i++){
+			ine[i].n=i;
+	     ine[i].oninput=function(){
+		  ine[this.n].value=this.value;
+		ine[this.n].nextElementSibling.innerHTML=ine[this.n].value;
+		st();
+		}
+	}
+	</script>
+</html>-->
+
+<!--<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.fl {
+				float: left;
+			}
+		</style>
+	</head>
+
+	<body>
+		<form action="" autocomplete="on">
+			<span class="fl">时间</span><input class="fl" type="date" /><br />
+			<span class="fl">月份</span><input class="fl" type="month" /><br />
+			<span class="fl">星期</span><input class="fl" type="week" /><br />
+			<input class="fl" type="text" /><br />
+			<span class="fl">选取本地时间</span><input class="fl" type="date-local" /><br />
+			<span class="fl">搜索关键字</span><input autocomplete="on" class="fl" type="search" /><br />
+			<input type="submit" />
+			<span class="fl">时间</span><input class="fl" type="time" /><br />
+			<span class="fl">颜色</span><input class="fl" type="color" style="width:100px;height:100px;border:0px;padding:0px;margin:0px;background:transparent;" /><br />
+			<br /><br /><br />
+			<span class="fl">上传文件</span><input class="fl" type="file" /><br />
+			<span class="fl">上传图片</span><input type="image" src="../" style="width:100px;height:100px;background:red;" />
+		</form>
+
+	</body>
+
+</html>-->
+	
+
+<!--<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>2D转换，移动，</title>
+		<style type="text/css">
+			div{
+				height:200px;
+				width:200px;
+				margin:50px auto;
+				background:cyan;
+				color:red;
+				font-size:34px;
+				font-weight:bolder;
+			}
+			#box{
+				background:blue;
+				color:white;
+				font-size:34px;
+				font-weight:bolder;
+				transform:translate(50px,-50px);
+				-webkit-transform:translate(50px,-50px);/*苹果和谷歌*/
+				-moz-transform:translate(50px,-50px);/*火狐*/
+				-mz-transform:translate(50px,-50px);/*ie9*/
+				-o-transform:translate(50px,-50px);/*欧朋*/
+			}
+			#box1{
+				background:red;
+				color:yellow;
+				font-size:34px;
+				font-weight:bolder;
+				transform:translateX(50px);
+				-webkit-transform:translateX(50px);/*苹果和谷歌*/
+				-moz-transform:translateX(50px);/*火狐*/
+				-mz-transform:translateX(50px);/*ie9*/
+				-o-transform:translateX(50px);/*欧朋*/
+			}
+			/*
+			 第一个参数：在这个平面内,在自身位置水平的方向移动
+			正值：向右；
+			负值：向左；、
+			第二个参数：在平面内，垂直方向的移动
+			正值：想下
+			负值：向上
+			
+			
+			如果只水平移动，第二个参数补零；
+			如果只垂直移动，第一个参数补零；
+			
+			
+			值可以是像素；也可以是百分比（参照是自身的宽高）
+			 * */
+		</style>
+	</head>
+	<body>
+		<div>我是一行文字</div>
+		<div id="box">我是移动后的盒子</div>
+		<div id="box1">我是第二个移动后的盒子</div>
+	</body>
+</html>-->
+
+<!--<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>2D旋转</title>
+		<style type="text/css">
+			div{
+				width:250px;
+				height:250px;
+				background:blue;
+				margin:50px auto;
+				line-height:250px;
+				text-align:center;
+				transform-origin:center center;
+			}
+			#box{
+				background:red;
+				border-radius:50%;
+			}
+			#bo{
+				background:green;
+				position:relative;
+				top:37.5px;
+				line-height:175px;
+				width:175px;
+				height:175px;
+				margin:auto;
+			}
+			#box1{
+				background:cyan;
+			}
+			/*
+			 rotate()旋转
+			 1.单位deg
+			 2.正值，就是顺时针
+			 3.负值，就是逆时针
+			 4.transform-origin：控制旋转的中心点
+			 * */
+		</style>
+	</head>
+	<body>
+		<div id="bs">第一个盒子</div>
+		<div id="box"><div id="bo">第二个盒子</div></div>
+		<div id="box1">第三个盒子</div>
+	</body>
+	<script>
+		var a=document.getElementById("box1");
+		var b=0;
+		setInterval(function(){
+			a.style.transform="rotate("+b+"deg)"
+			b+=1;
+		},50)
+		
+		
+		var e=document.getElementById("bs");
+		var f=0;
+		setInterval(function(){
+			e.style.transform="rotate("+f+"deg)"
+			f+=1;
+		},50)
+		
+		var g=document.getElementById("bo");
+		var h=0;
+		setInterval(function(){
+			g.style.transform="rotate("+h+"deg)"
+			h+=1;
+		},50)
+	</script>
+</html>-->
+
+<!--<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>2D</title>
+		<style type="text/css">
+			div{
+				width:250px;
+				height:250px;
+				background:blue;
+				margin:0px auto;
+				border:2px solid purple;
+				color:white;
+				font-size:43px;
+			}
+			#box{
+				background:red;
+				color:yellow;
+				font-size:43px;
+			}
+			#box1{
+				background:cyan;
+				border-radius:50%;
+				line-height:250px;
+				text-align:center;
+				color:purple;
+				font-size:43px;
+				transform:rotate(45deg);
+				-webkit-transform:rotate(45deg);/*苹果和谷歌*/
+				-moz-transform:rotate(45deg);/*火狐*/
+				-mz-transform:rotate(45deg);/*ie9*/
+				-o-transform:rotate(45deg);/*欧朋*/
+				
+				transform:;
+				-webkit-transform:scale(2,2);/*苹果和谷歌*/
+				-moz-transform:scale(2,2);/*火狐*/
+				-mz-transform:scale(2,2);/*ie9*/
+				-o-transform:scale(2,2);/*欧朋*/
+				
+	        transition-property:transform,opacity;/*过度的属性*/
+	        transition-duration:5s;/*过渡的所需时间，默认0*/
+	        transition-timing-function:ease;/*过渡所需时间曲线*/
+	        transition-delay:0;/*过渡何时开始。默认0*/
+			}
+			
+			//transition 简写属性 
+			transition-property 
+		</style>
+	</head>
+	<body>
+		<div>第一个盒子</div>
+		<div id="box">第二个盒子</div>
+		<div id="box1">第三个盒子</div>
+	</body>
+	<script>
+		
+		var a=document.getElementById("box1");
+		var b=0;
+		setInterval(function(){
+			b+=1;
+		},50)
+	</script>
+</html>-->
+
+
+
+<!--<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width:250px;
+				height:250px;
+				background:blue;
+				margin:50px auto;
+				line-height:250px;
+				text-align:center;
+				transform-origin:center center;
+			}
+			#box{
+				background:red;
+				border-radius:50%;
+			}
+			#bo{
+				background:green;
+				position:relative;
+				top:37.5px;
+				line-height:175px;
+				width:175px;
+				height:175px;
+				margin:auto;
+			}
+			#box1{
+				background:cyan;
+			}
+			/*
+			 rotate()旋转
+			 1.单位deg
+			 2.正值，就是顺时针
+			 3.负值，就是逆时针
+			 4.transform-origin：控制旋转的中心点
+			 * */
+		</style>
+	</head>
+	<body>
+		<div id="bs">第一个盒子</div>
+		<div id="box"><div id="bo">第二个盒子</div></div>
+		<div id="box1">第三个盒子</div>
+	</body>
+</html>-->
+
+<!--
+	<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>3D魔方Rubik's Cube</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		/*radial-gradient(ellipse 100px 50px at 30% 20%,#adbf41 ,#328a26)
+		radial-gradient(circle 100px at 30% 20%,#adbf41 ,#328a26)*/
+		html {
+			height: 100%;
+			/*background: radial-gradient(#adbf41, #328a26);*/
+		}
+		.stage {
+			width: 20em;
+			height: 20em;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+			perspective: 1000px;
+			-webkit-perspective: 1000px;
+			perspective: 1000px;
+		}
+		.cube * {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			box-shadow: 0 0 5em rgba(255, 255, 255, 0.4);
+			background: -webkit-linear-gradient(left,  rgba(85, 85, 85, 1) 0px, rgba(85, 85, 85, 1) 3px,rgba(0, 0, 0, 0) 0px), -webkit-linear-gradient(top, rgba(85, 85, 85, 1) 0px, rgba(85, 85, 85, 1) 3px, rgba(0, 0, 0, 0) 0px);
+			background-size: 2.5em 2.5em;
+			border: 2px solid rgba(85, 85, 85, 1);
+			border-top:none;
+			border-left:none;
+			border-radius: 0.2em;
+		}
+		.font {
+			transform: translateZ(10em);
+		}
+		.back {
+			transform: rotateX(180deg) translateZ(10em);
+		}
+		.left {
+			transform: rotateY(-90deg) translateZ(10em);
+		}
+		.right {
+			transform: rotateY(90deg)  translateZ(10em);
+		}
+		.top {
+			transform: rotateX(90deg)  translateZ(10em);
+		}
+		.bottom {
+			
+			transform: rotateX(-90deg)  translateZ(10em);
+		}
+		.cube {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			-o-animation: spin linear 6s infinite, bigchange linear 6s;
+			animation: spin linear 6s infinite, bigchange linear 6s;
+			-moz-transform-style: preserve-3d;
+			-ms-transform-style: preserve-3d;
+			transform-style: preserve-3d;
+			-webkit-transform-style: preserve-3d;/*使被转换的子元素保留其 3D 转换：*/
+		}
+		@-webkit-keyframes spin {
+			0% {
+				-webkit-transform: translateZ(-10em) rotateX(0) rotateY(0deg);
+				-ms-transform: translateZ(-10em) rotateX(0) rotateY(0deg);
+				-o-transform: translateZ(-10em) rotateX(0) rotateY(0deg);
+				transform: translateZ(-10em) rotateX(0) rotateY(0deg);
+			}
+			100% {
+				-webkit-transform: translateZ(-10em) rotateX(360deg) rotateY(360deg);
+				-ms-transform: translateZ(-10em) rotateX(360deg) rotateY(360deg);
+				-o-transform: translateZ(-10em) rotateX(360deg) rotateY(360deg);
+				transform: translateZ(-10em) rotateX(360deg) rotateY(360deg);
+			}
+		}
+		@-webkit-keyframes bigchange {
+			0% {
+				width: 0em;
+				height: 0em;
+			}
+			100% {
+				width: 20em;
+				height: 20em;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="stage">
+		<div class="cube">
+			<div class="font"></div>
+			<div class="back"></div>
+			<div class="left"></div>
+			<div class="right"></div>
+			<div class="top"></div>
+			<div class="bottom"></div>
+		</div>
+	</div>
+</body>
+<html>
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	    <style type="text/css">
+	    	.white{
+	    		font-size:12px;
+	    	 	text-align:center;
+	    	    text-indent:30px;
+	    	    width:33.33%;
+	    	    height:200px;
+	    	    line-height:200px;
+	    	    background:white;
+	    	    display:inline-block;
+	    	    float:left;
+	    	}
+	    	.yellow{
+	    		font-size:12px;
+	    	 	text-align:center;
+	    	    text-indent:30px;
+	    	    width:33.33%;
+	    	    height:200px;
+	    	    line-height:200px;
+	    	    background:yellow;
+	    	    display:inline-block;
+	    	    float:left;
+	    	}
+	    	.blue{
+	    		font-size:12px;
+	    	 	text-align:center;
+	    	    text-indent:30px;
+	    	    width:33.33%;
+	    	    height:200px;
+	    	    line-height:200px;
+	    	    background:blue;
+	    	    display:inline-block;
+	    	    float:left;
+	    	}
+	    	.green{
+	    		font-size:12px;
+	    	 	text-align:center;
+	    	    text-indent:30px;
+	    	    width:33.33%;
+	    	    height:200px;
+	    	    line-height:200px;
+	    	    background:green;
+	    	    display:inline-block;
+	    	    float:left;
+	    	}
+	    	.red{
+	    		font-size:12px;
+	    	 	text-align:center;
+	    	    text-indent:30px;
+	    	    width:33.33%;
+	    	    height:200px;
+	    	    line-height:200px;
+	    	    background:red;
+	    	    float:left;
+	    	    display:inline-block;
+	    	}
+	    	.orange{
+	    		font-size:12px;
+	    	 	text-align:center;
+	    	    text-indent:30px;
+	    	    width:33.33%;
+	    	    height:200px;
+	    	    line-height:200px;
+	    	    background:orange;
+	    	    float:left;
+	    	    display:inline-block;
+	    	}
+	    	.cyan{
+	    		font-size:12px;
+	    	 	text-align:center;
+	    	    text-indent:30px;
+	    	    width:33.33%;
+	    	    height:200px;
+	    	    line-height:200px;
+	    	    background:cyan;
+	    	    float:left;
+	    	    display:inline-block;
+	    	}
+	    	.brownamber{
+	    		font-size:12px;
+	    	 	text-align:center;
+	    	    text-indent:30px;
+	    	    width:33.33%;
+	    	    height:200px;
+	    	    line-height:200px;
+	    	    background:brown;
+	    	    float:left;
+	    	    display:inline-block;
+	    	}
+	    	.purple{
+	    		font-size:12px;
+	    	 	text-align:center;
+	    	    text-indent:30px;
+	    	    width:33.33%;
+	    	    height:200px;
+	    	    line-height:200px;
+	    	    background:purple;
+	    	    float:left;
+	    	    display:inline-block;
+	    	}
+	    	.mofang{
+	    		position:absolute;
+	    		left:0;
+	    		right:0;
+	    		top:50%;
+	    		margin:auto;
+	    		margin-top:-303px;
+	    		width:606px;
+	    		height:606px;
+	    	 	transform:rotateX(-23deg) rotateY(-28deg) rotateZ(0deg);
+			-o-animation: spin linear 6s infinite, bigchange linear 6s;
+			animation: spin linear 6s infinite, bigchange linear 6s;
+			-moz-transform-style: preserve-3d;
+			-ms-transform-style: preserve-3d;
+			transform-style: preserve-3d;
+			-webkit-transform-style: preserve-3d;
+	    	}
+	    	.white1{
+	    		position:absolute;
+	    		margin:0 auto;
+	    	 	text-align:center;
+	    	 	width:606px;
+	    	 	height:606px;
+	    	 	background:purple;
+	    	 	z-index:1;
+	    	 	transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateZ(300px);
+	    	}
+	    	.yellow1{
+	    		position:absolute;
+	    		margin:0 auto;
+	    	 	text-align:center;
+	    	 	width:606px;
+	    	 	height:606px;
+	    	 	background:purple;
+	    	 	z-index:0;
+	    	 	transform:rotateX(0deg) rotateY(180deg) rotateZ(0deg) translateZ(300px);
+	    	}
+	    	.red1{
+	    		position:absolute;
+	    		margin:0 auto;
+	    	 	text-align:center;
+	    	 	width:606px;
+	    	 	left:303px;
+	    	 	height:606px;
+	    	 	background:purple;
+	    	 	z-index:0;
+	    	 	transform:rotateX(0deg) rotateY(90deg) rotateZ(0deg)
+	    	}
+	    	.orange1{
+	    		position:absolute;
+	    		margin:0 auto;
+	    	 	text-align:center;
+	    	 	width:606px;
+	    	 	left:-303px;
+	    	 	height:606px;
+	    	 	background:purple;
+	    	 	z-index:0;
+	    	 	transform:rotateX(0deg) rotateY(-90deg) rotateZ(0deg)
+	    	}
+	    	.blue1{
+	    		position:absolute;
+	    		margin:0 auto;
+	    	 	text-align:center;
+	    	 	width:606px;
+	    	 	left:-303px;
+	    	 	height:606px;
+	    	 	background:purple;
+	    	 	z-index:0;
+	    	 	transform:rotateX(90deg) rotateY(0deg) rotateZ(0deg)  translateZ(300px) translateX(300px);
+	    	}
+	    	.green1{
+	    		position:absolute;
+	    		margin:0 auto;
+	    	 	text-align:center;
+	    	 	width:606px;
+	    	 	left:-303px;
+	    	 	height:606px;
+	    	 	background:purple;
+	    	 	z-index:0;
+	    	 	transform:rotateX(90deg) rotateY(0deg) rotateZ(0deg)  translateZ(-300px) translateX(300px);
+	    	}
+	    	@-webkit-keyframes spin {
+			0% {
+				-webkit-transform: translateZ(-10em) rotateX(0) rotateY(0deg);
+				-ms-transform: translateZ(-10em) rotateX(0) rotateY(0deg);
+				-o-transform: translateZ(-10em) rotateX(0) rotateY(0deg);
+				transform: translateZ(-10em) rotateX(0) rotateY(0deg);
+			}
+			100% {
+				-webkit-transform: translateZ(-10em) rotateX(360deg) rotateY(360deg);
+				-ms-transform: translateZ(-10em) rotateX(360deg) rotateY(360deg);
+				-o-transform: translateZ(-10em) rotateX(360deg) rotateY(360deg);
+				transform: translateZ(-10em) rotateX(360deg) rotateY(360deg);
+			}
+		}
+		    /*@-webkit-keyframes bigchange {
+			0% {
+				width: 0em;
+				height: 0em;
+			}
+			100% {
+				width: 20em;
+				height: 20em;
+			}
+		}*/
+	    	
+	    </style>
+	</head>
+	<body>
+		<div class="mofang">
+		<div class="white1">
+			<div class="red"></div>
+			<div class="blue"></div>
+			<div class="orange"></div>
+			<div class="green"></div>
+			<div class="white"></div>
+			<div class="yellow"></div>
+			<div class="cyan"></div>
+			<div class="purple"></div>
+			<div class="brownamber"></div>
+			</div>
+	    <div class="yellow1">
+			<div class="red"></div>
+			<div class="blue"></div>
+			<div class="orange"></div>
+			<div class="green"></div>
+			<div class="white"></div>
+			<div class="yellow"></div>
+			<div class="cyan"></div>
+			<div class="purple"></div>
+			<div class="brownamber"></div>
+	    </div>
+		<div class="red1">
+			<div class="red"></div>
+			<div class="blue"></div>
+			<div class="orange"></div>
+			<div class="green"></div>
+			<div class="white"></div>
+			<div class="yellow"></div>
+			<div class="cyan"></div>
+			<div class="purple"></div>
+			<div class="brownamber"></div>
+		</div>
+		<div class="orange1">
+			<div class="red"></div>
+			<div class="blue"></div>
+			<div class="orange"></div>
+			<div class="green"></div>
+			<div class="white"></div>
+			<div class="yellow"></div>
+			<div class="cyan"></div>
+			<div class="purple"></div>
+			<div class="brownamber"></div>
+		</div>
+		<div class="blue1">
+			<div class="red"></div>
+			<div class="blue"></div>
+			<div class="orange"></div>
+			<div class="green"></div>
+			<div class="white"></div>
+			<div class="yellow"></div>
+			<div class="cyan"></div>
+			<div class="purple"></div>
+			<div class="brownamber"></div>
+		</div>
+		<div class="green1">
+			<div class="red"></div>
+			<div class="purple"></div>
+			<div class="blue"></div>
+			<div class="orange"></div>
+			<div class="brownamber"></div>
+			<div class="green"></div>
+			<div class="white"></div>
+			<div class="yellow"></div>
+			<div class="cyan"></div>
+		</div>
+		</div>
+	</body>
+	<script>
+		
+	</script>
+</html>

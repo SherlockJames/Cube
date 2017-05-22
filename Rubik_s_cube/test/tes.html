@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		  *{
+		  	padding: 0;
+		  	margin: 0;
+		  }	
+		  .box{
+		  	height:30px;
+		  	width:200px;
+		  	border: 1px solid black;
+		  }
+		  .box>div{
+		  	height:30px;
+		  	width:0;
+		  	transition: all 5s;
+		  	background: red;
+		  }
+		</style>
+		<script src="../mofang1/js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<input type="button"  value="开始加载"/>
+		<input type="button"  value="重置"/>
+		<div class="box"><div></div></div>
+	</body>
+	<script type="text/javascript">
+		$("input:eq(0)").click(function(){
+			$(".box>div").css("width","100%")
+		})
+		$("input:eq(1)").click(function(){
+			$(".box>div").css("transition","all 0s")
+			$(".box>div").css("width","0")
+			setTimeout(function(){
+			$(".box>div").css("transition","all 5s")
+			},0)
+		})
+		
+	</script>
+</html>

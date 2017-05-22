@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+				border: 0;
+			}
+			
+			ul {
+				list-style: none;
+				width: 50px;
+				height: 50px;
+				transform-style: preserve-3d;
+				position: relative;
+			}
+			
+			li {
+				width: 50px;
+				height: 50px;
+				transform-style: preserve-3d;
+				position: absolute;
+			}
+			
+			.box {
+				margin: 0 auto;
+				margin-top: 300px;
+				transform: rotateX(-30deg)rotateY(30deg);
+			}
+			
+			.box>li:nth-child(1) {
+				transform: translateZ(50px)translateX(-50px)translateY(-50px);
+				animatio: move1 2.5s linear 0s infinite alternate;
+			}
+			
+			@keyframes move1 {
+				33.33% {
+					transform: translateZ(100px)translateX(-50px)translateY(-50px);
+				}
+				66.66% {
+					transform: translateZ(100px)translateX(-100px)translateY(-50px);
+				}
+				100% {
+					transform: translateZ(100px)translateX(-100px)translateY(-100px);
+				}
+			}
+			
+			.box>li:nth-child(2) {
+				transform: translateZ(50px)translateY(-50px);
+				animatio: move2 2.5s linear 0s infinite alternate;
+			}
+			
+			@keyframes move2 {
+				33.33% {
+					transform: translateZ(100px)translateY(-50px);
+				}
+				66.66% {
+					transform: translateZ(100px)translateY(-50px);
+				}
+				100% {
+					transform: translateZ(100px)translateY(-100px);
+				}
+			}
+			
+			.box>li:nth-child(3) {
+				transform: translateZ(50px)translateX(50px)translateY(-50px);
+				animatio: move3 2.5s linear 0s infinite alternate;
+			}
+			
+			@keyframes move3 {
+				33.33% {
+					transform: translateZ(100px)translateX(50px)translateY(-50px);
+				}
+				66.66% {
+					transform: translateZ(100px)translateX(100px)translateY(-50px);
+				}
+				100% {
+					transform: translateZ(100px)translateX(100px)translateY(-100px);
+				}
+			}
+			
+			.box>li:nth-child(4) {
+				transform: translateZ(50px)translateX(-50px);
+				animatio: move4 2.5s linear 0s infinite alternate;
+			}
+			
+			@keyframes move4 {
+				33.33% {
+					transform: translateZ(100px)translateX(-50px);
+				}
+				66.66% {
+					transform: translateZ(100px)translateX(-100px);
+				}
+				100% {
+					transform: translateZ(100px)translateX(-100px);
+				}
+			}
+			
+			.box>li:nth-child(5) {
+				transform: translateZ(50px);
+				animatio: move5 2.5s linear 0s infinite alternate;
+			}
+			
+			@keyframes move5 {
+				33.33% {
+					transform: translateZ(100px);
+				}
+				66.66% {
+					transform: translateZ(100px);
+				}
+				100% {
+					transform: translateZ(100px);
+				}
+			}
+			
+			.box>li:nth-child(6) {
+				transform: translateZ(50px)translateX(50px);
+				animatio: move6 2.5s linear 0s infinite alternate;
+			}
+			
+			@keyframes move6 {
+				33.33% {
+					transform: translateZ(100px)translateX(50px);
+				}
+				66.66% {
+					transform: translateZ(100px)translateX(100px);
+				}
+				100% {
+					transform: translateZ(100px)translateX(100px);
+				}
+			}
+			
+			.box>li:nth-child(7) {
+				transform: translateZ(50px)translateX(-50px)translateY(50px);
+				animatio: move7 2.5s linear 0s infinite alternate;
+			}
+			
+			@keyframes move7 {
+				33.33% {
+					transform: translateZ(100px)translateX(-50px)translateY(50px);
+				}
+				66.66% {
+					transform: translateZ(100px)translateX(-100px)translateY(50px);
+				}
+				100% {
+					transform: translateZ(100px)translateX(-100px)translateY(100px);
+				}
+			}
+			
+			.box>li:nth-child(8) {
+				transform: translateZ(50px)translateY(50px);
+				animatio: move8 2.5s linear 0s infinite alternate;
+			}
+			
+			@keyframes move8 {
+				33.33% {
+					transform: translateZ(100px)translateY(50px);
+				}
+				66.66% {
+					transform: translateZ(100px)translateY(50px);
+				}
+				100% {
+					transform: translateZ(100px)translateY(100px);
+				}
+			}
+			
+			.box>li:nth-child(9) {
+				transform: translateZ(50px)translateX(50px)translateY(50px);
+				animatio: move9 2.5s linear 0s infinite alternate;
+			}
+			
+			@keyframes move9 {
+				33.33% {
+					transform: translateZ(100px)translateX(50px)translateY(50px);
+				}
+				66.66% {
+					transform: translateZ(100px)translateX(100px)translateY(50px);
+				}
+				100% {
+					transform: translateZ(100px)translateX(100px)translateY(100px);
+				}
+			}
+			
+			.box>li:nth-child(10) {
+				transform: translateX(-50px)translateY(-50px);
+				animatio: move10 2.5s linear 0s infinite alternate;
+			}
+			
+			@keyframes move10 {
+				33.33% {
+					transform: translateX(-50px)translateY(-50px);
+				}
+				66.66% {
+					transform: translateX(-100px)translateY(-50px);
+				}
+				100% {
+					transform: translateX(-100px)translateY(-100px);
+				}
+			}
+			
+			.box>li:nth-child(11) {
+				transform: translateY(-50px);
+				animatio: move11 2.5s linear 0s infinite alternate;
+			}
+			
+			@keyframes move11 {
+				33.33% {
+					transform: translateY(-50px);
+				}
+				66.66% {
+					transform: translateY(-50px);
+				}
+				100% {
+					transform: translateY(-100px);
+				}
+			}
+			
+			.box>li:nth-child(12) {
+				transform: translateX(50px)translateY(-50px);
+				animatio: move12 2.5s linear 0s infinite alternate;
+			}
+			
+			@keyframes move12 {
+				33.33% {
+					transform: translateX(50px)translateY(-50px);
+				}
+				66.66% {
+					transform: translateX(100px)translateY(-50px);
+				}
+				100% {
+					transform: translateX(100px)translateY(-100px);
+				}
+			}
+			
+			.box>li:nth-child(13) {
+				transform: translateX(-50px);
+				animatio: move13 2.5s linear 0s infinite alternate;
+			}
+			
+			@keyframes move13 {
+				33.33% {
+					transform: translateX(-50px);
+				}
+				66.66% {
+					transform: translateX(-100px);
+				}
+				100% {
+					transform: translateX(-100px);
+				}
+			}
+			
+			.box>li:nth-child(14) {}
+			
+			.box>li:nth-child(15) {
+				transform: translateX(50px);
+				animatio: move15 2.5s linear 0s infinite alternate;
+			}
+			
+			@keyframes move15 {
+				33.33% {
+					transform: translateX(50px);
+				}
+				66.66% {
+					transform: translateX(100px);
+				}
+				100% {
+					transform: translateX(100px);
+				}
+			}
+			
+			.box>li:nth-child(16) {
+				transform: translateX(-50px) translateY(50px);
+				animatio: move16 2.5s linear 0s infinite alternate;
+			}
+			
+			@keyframes move16 {
+				33.33% {
+					transform: translateX(-50px) translateY(50px);
+				}
+				66.66% {
+					transform: translateX(-100px) translateY(50px);
+				}
+				100% {
+					transform: translateX(-100px) translateY(100px);
+				}
+			}
+			
+			.box>li:nth-child(17) {
+				transform: translateY(50px);
+				animatio: move17 2.5s linear 0s infinite alternate;
+			}
+			
+			@keyframes move17 {
+				33.33% {
+					transform: translateY(50px);
+				}
+				66.66% {
+					transform: translateY(50px);
+				}
+				100% {
+					transform: translateY(100px);
+				}
+			}
+			
+			.box>li:nth-child(18) {
+				transform: translateX(50px)translateY(50px);
+				animatio: move18 2.5s linear 0s infinite alternate;
+			}
+			
+			@keyframes move18 {
+				33.33% {
+					transform: translateX(50px)translateY(50px);
+				}
+				66.66% {
+					transform: translateX(100px)translateY(50px);
+				}
+				100% {
+					transform: translateX(100px)translateY(100px);
+				}
+			}
+			
+			.box>li:nth-child(19) {
+				transform: translateZ(-50px)translateX(-50px)translateY(-50px);
+				animatio: move19 2.5s linear 0s infinite alternate;
+			}
+			
+			@keyframes move19 {
+				33.33% {
+					transform: translateZ(-100px)translateX(-50px)translateY(-50px);
+				}
+				66.66% {
+					transform: translateZ(-100px)translateX(-100px)translateY(-50px);
+				}
+				100% {
+					transform: translateZ(-100px)translateX(-100px)translateY(-100px);
+				}
+			}
+			
+			.box>li:nth-child(20) {
+				transform: translateZ(-50px)translateY(-50px);
+				animatio: move20 2.5s linear 0s infinite alternate;
+			}
+			
+			@keyframes move20 {
+				33.33% {
+					transform: translateZ(-100px)translateY(-50px);
+				}
+				66.66% {
+					transform: translateZ(-100px)translateY(-50px);
+				}
+				100% {
+					transform: translateZ(-100px)translateY(-100px);
+				}
+			}
+			
+			.box>li:nth-child(21) {
+				transform: translateZ(-50px)translateX(50px)translateY(-50px);
+				animatio: move21 2.5s linear 0s infinite alternate;
+			}
+			
+			@keyframes move21 {
+				33.33% {
+					transform: translateZ(-100px)translateX(50px)translateY(-50px);
+				}
+				66.66% {
+					transform: translateZ(-100px)translateX(100px)translateY(-50px);
+				}
+				100% {
+					transform: translateZ(-100px)translateX(100px)translateY(-100px);
+				}
+			}
+			
+			.box>li:nth-child(22) {
+				transform: translateZ(-50px)translateX(-50px);
+				animatio: move22 2.5s linear 0s infinite alternate;
+			}
+			
+			@keyframes move22 {
+				33.33% {
+					transform: translateZ(-100px)translateX(-50px);
+				}
+				66.66% {
+					transform: translateZ(-100px)translateX(-100px);
+				}
+				100% {
+					transform: translateZ(-100px)translateX(-100px);
+				}
+			}
+			
+			.box>li:nth-child(23) {
+				transform: translateZ(-50px);
+				animatio: move23 2.5s linear 0s infinite alternate;
+			}
+			
+			@keyframes move23 {
+				33.33% {
+					transform: translateZ(-100px);
+				}
+				66.66% {
+					transform: translateZ(-100px);
+				}
+				100% {
+					transform: translateZ(-100px);
+				}
+			}
+			
+			.box>li:nth-child(24) {
+				transform: translateZ(-50px)translateX(50px);
+				animatio: move24 2.5s linear 0s infinite alternate;
+			}
+			
+			@keyframes move24 {
+				33.33% {
+					transform: translateZ(-100px)translateX(50px);
+				}
+				66.66% {
+					transform: translateZ(-100px)translateX(100px);
+				}
+				100% {
+					transform: translateZ(-100px)translateX(100px);
+				}
+			}
+			
+			.box>li:nth-child(25) {
+				transform: translateZ(-50px)translateX(-50px)translateY(50px);
+				animatio: move25 2.5s linear 0s infinite alternate;
+			}
+			
+			@keyframes move25 {
+				33.33% {
+					transform: translateZ(-100px)translateX(-50px)translateY(50px);
+				}
+				66.66% {
+					transform: translateZ(-100px)translateX(-100px)translateY(50px);
+				}
+				100% {
+					transform: translateZ(-100px)translateX(-100px)translateY(100px);
+				}
+			}
+			
+			.box>li:nth-child(26) {
+				transform: translateZ(-50px)translateY(50px);
+				animatio: move26 2.5s linear 0s infinite alternate;
+			}
+			
+			@keyframes move26 {
+				33.33% {
+					transform: translateZ(-100px)translateY(50px);
+				}
+				66.66% {
+					transform: translateZ(-100px)translateY(50px);
+				}
+				100% {
+					transform: translateZ(-100px)translateY(100px);
+				}
+			}
+			
+			.box>li:nth-child(27) {
+				transform: translateZ(-50px)translateX(50px)translateY(50px);
+				animatio: move27 2.5s linear 0s infinite alternate;
+			}
+			
+			@keyframes move27 {
+				33.33% {
+					transform: translateZ(-100px)translateX(50px)translateY(50px);
+				}
+				66.66% {
+					transform: translateZ(-100px)translateX(100px)translateY(50px);
+				}
+				100% {
+					transform: translateZ(-100px)translateX(100px)translateY(100px);
+				}
+			}
+			
+			.sml>li:nth-child(1) {
+				background: blue;
+				transform: translateZ(25px);
+				z-index: 2;
+			}
+			
+			.sml>li:nth-child(2) {
+				background: green;
+				transform: translateZ(-25px);
+				z-index: 2;
+			}
+			
+			.sml>li:nth-child(3) {
+				background: yellow;
+				transform: rotateX(90deg)translateZ(25px);
+				z-index: 2;
+			}
+			
+			.sml>li:nth-child(4) {
+				background: white;
+				z-index: 2;
+				transform: rotateX(-90deg)translateZ(25px);
+			}
+			
+			.sml>li:nth-child(5) {
+				background: orange;
+				transform: rotateY(-90deg)translateZ(25px);
+				z-index: 2;
+			}
+			
+			.sml>li:nth-child(6) {
+				background: red;
+				transform: rotateY(90deg)translateZ(25px);
+				z-index: 2;
+			}
+		</style>
+		<script src="mofang1/js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<ul class="box">
+			<li id="bo">
+				<ul class="sml">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</li>
+			<li>
+				<ul class="sml">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</li>
+			<li>
+				<ul class="sml">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</li>
+			<li>
+				<ul class="sml">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</li>
+			<li>
+				<ul class="sml">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</li>
+			<li>
+				<ul class="sml">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</li>
+			<li>
+				<ul class="sml">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</li>
+			<li>
+				<ul class="sml">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</li>
+			<li>
+				<ul class="sml">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</li>
+			<li>
+				<ul class="sml">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</li>
+			<li>
+				<ul class="sml">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</li>
+			<li>
+				<ul class="sml">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</li>
+			<li>
+				<ul class="sml">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</li>
+			<li>
+				<ul class="sml">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</li>
+			<li>
+				<ul class="sml">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</li>
+			<li>
+				<ul class="sml">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</li>
+			<li>
+				<ul class="sml">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</li>
+			<li>
+				<ul class="sml">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</li>
+			<li>
+				<ul class="sml">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</li>
+			<li>
+				<ul class="sml">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</li>
+			<li>
+				<ul class="sml">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</li>
+			<li>
+				<ul class="sml">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</li>
+			<li>
+				<ul class="sml">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</li>
+			<li>
+				<ul class="sml">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</li>
+			<li>
+				<ul class="sml">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</li>
+			<li>
+				<ul class="sml">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</li>
+			<li>
+				<ul class="sml">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</li>
+		</ul>
+	</body>
+	<script type="text/javascript">
+		var ul = document.querySelector(".box");
+		var a = 30,
+			b = -30;
+			
+			$(".boxx>li").animate({
+				
+			})
+			
+
+		document.onmousedown = function(ev) {
+			var ev = ev || window.event;
+			var x = ev.clientX;
+			var y = ev.clientY;
+			document.onmousemove = function(ev) {
+				var ev = ev || window.event;
+				var X = ev.clientX;
+				var Y = ev.clientY;
+				var le = X - x;
+				var tp = Y - y;
+				b -= tp * 0.1;
+				a += le * 0.1;
+				ul.style.transform = " rotateX(" + b + "deg) rotateY(" + a + "deg)";
+				x = X;
+				y = Y;
+			}
+			document.onmouseup = function() {
+				document.onmousemove = null;
+			}
+		}
+	</script>
+
+</html>

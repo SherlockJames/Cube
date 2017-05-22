@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+     <script>
+     	  var arr=[1,2,3,4,5];
+     	  var arr1=[6,7,8,9,10]
+     	  var arr3=[arr,arr1];
+     	  
+     	  var arr4=[11,12,13,14,15];
+     	  var arr5=[16,17,18,19,20]
+     	  var arr6=[arr4,arr5];
+     	  
+     	  var arr7=[21,22,23,24,25];
+     	  var arr8=[26,27,28,29,30];
+     	  var arr9=[arr7,arr8];
+     	  
+     	  var b=[arr3,arr6,arr9];
+     	  
+     	  console.log(b[2][0][2]);
+     	  
+     	  for(var i=1;i<4;i++){
+     	  	for(var j=1;j<3;j++){
+     	  		for(var k=1;k<6;k++){
+     	  			document.write("第一个三维数组的第"+i+"个二维数组的第"+j+"个一维数组的第"+k+"个值:")
+     	  			document.write(b[i-1][j-1][k-1]+"<br/>")
+     	  		}
+     	  	document.write("<br/>")
+     	  	}
+     	  }
+     </script>
+</html>

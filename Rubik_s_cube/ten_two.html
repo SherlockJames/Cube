@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>3d</title>
+	<style>
+	/*
+			transform:translateZ(10px) translateX(80px) translateY(-93px) rotateZ(35.5deg) rotateX(90deg);
+			backface-visibility:hidden;
+			backface-visibility:hidden;
+			
+	 如果子级也有3d旋转，父级也有3d转换。想要保留子级的效果，可以添加preserve-3d;
+	 * */
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			transform-style: preserve-3d;
+		}
+		.di{
+			height:1200px;
+			width:1200px;
+			transform-style: preserve-3d;
+			position:absolute;
+			left:0;
+			right:0;
+			margin:300px auto;
+			overflow:hidden;
+			border:1px solid black;
+			-webkit-animation:move 5s linear 0s infinite;
+			transform-origin:center center;
+			transform:rotateZ(0deg) rotateX(0deg) rotateY(0deg);
+		}
+		.box{
+			height:300px;
+			width:432px;
+			transform-style: preserve-3d;
+			position:absolute;
+			left:0;
+			right:0;
+			margin:0 auto;
+			margin-top:130px;
+			-webkit-animation:mover 2s linear 0s infinite;
+			/*transform-origin:center center;*/
+			transform:rotateZ(0deg) rotateX(0deg) rotateY(0deg);
+		}
+		@keyframes mover{
+		 	from{
+			transform:rotateZ(0deg) rotateX(0deg) rotateY(0deg);
+		 	}
+		 	to{
+			transform:rotateZ(0deg) rotateX(0deg) rotateY(360deg);
+		 	}
+		 }
+		/*@keyframes move{
+		 	from{
+			transform:rotateZ(0deg) rotateX(0deg) rotateY(0deg);
+		 	}
+		 	to{
+			transform:rotateZ(360deg) rotateX(0deg) rotateY(0deg);
+		 	}
+		 }*/
+		ul:first-child{
+			height:300px;
+			width:432px;
+			transform-style: preserve-3d;
+			position:absolute;
+			left:0;
+			right:0;
+			margin:0 auto;
+			transform:rotateZ(0deg) rotateX(0deg) rotateY(0deg) translateZ(220px);
+		}
+		ul:nth-child(2){
+			height:300px;
+			width:432px;
+			position:absolute;
+			transform-style: preserve-3d;
+			left:0;
+			right:0;
+			margin:0 auto;
+			margin-left:9px;
+			margin-top:2px;
+			transform:rotateZ(36deg) rotateX(0deg) rotateY(0deg) translateZ(220px);
+		}
+		ul:nth-child(3){
+			height:300px;
+			width:432px;
+			transform-style: preserve-3d;
+			position:absolute;
+			left:0;
+			right:0;
+			margin:0 auto;
+			margin-top:602px;
+			transform:rotateZ(0deg) rotateX(0deg) rotateY(0deg) translateZ(200px);
+		}
+		ul:last-child{
+			height:300px;
+			width:432px;
+			position:absolute;
+			transform-style: preserve-3d;
+			left:0;
+			right:0;
+			margin:0 auto;
+			margin-left:9px;
+			margin-top:602px;
+			transform:rotateZ(36deg) rotateX(0deg) rotateY(0deg) translateZ(200px);
+		}
+		li{
+			width:100%;
+			position:absolute;
+			height:100%;
+			list-style:none;
+			text-align:center;
+			line-height:300px;
+			font-size:150px;
+			font-weight:bolder;
+				transform-origin:bottom center;
+		}
+		.box1>li:nth-child(1){
+			background:url("img/wured.png") no-repeat 50% 50%;
+			color:white;
+		}
+		.box1>li:nth-child(2){
+			transform:translateX(80px) translateY(-244px) rotateZ(35.5deg) rotateX(63deg);
+			background:url("img/wuorange.png") no-repeat 50% 50%;
+			color:white;
+		}
+		.box1>li:nth-child(3){
+			transform:translateX(-81px) translateY(-242px) rotateZ(-35.5deg) rotateX(62deg);
+			background:url("img/wublue.png") no-repeat 50% 50%;
+			color:white;
+		}
+	    .box1>li:nth-child(4){
+			transform:translateX(130px) translateY(-93px) rotateZ(-251.5deg) rotateX(63deg);
+			background:url("img/wugreen.png") no-repeat 50% 50%;
+			color:white;
+		}
+		.box1>li:nth-child(5){
+			transform:translateX(-131px) translateY(-91px) rotateZ(252deg) rotateX(62deg);
+			background:url("img/wuwhite.png") no-repeat 50% 50%;
+			color:black;
+		}
+		.box1>li:nth-child(6){
+			transform:translateY(0px) rotateZ(180deg) rotateX(62deg);
+			background:url("img/wuyellow.png") no-repeat 50% 50%;
+			color:white;
+		}
+		.box2>li:nth-child(1){
+			transform:rotateY(180deg) translateZ(432px);
+			background:url("img/wupurple.png") no-repeat 50% 50%;
+			color:white;
+		}
+		.box2>li:nth-child(2){
+			transform:translateX(80px) translateY(-244px) rotateZ(35.5deg) translateZ(-432px) rotateX(-63deg);
+			background:url("img/wucyan.png") no-repeat 50% 50%;
+			color:white;
+		}
+		.box2>li:nth-child(3){
+			transform:translateX(-81px) translateY(-242px) rotateZ(-35.5deg) translateZ(-432px) rotateX(298deg);
+			background:url("img/wupink.png") no-repeat 50% 50%;
+			color:white;
+		}
+		.box2>li:nth-child(4){
+			transform:translateX(130px) translateY(-93px) rotateZ(-251.5deg) translateZ(-432px) rotateX(-63deg);
+			background:url("img/wublack.png") no-repeat 50% 50%;
+			color:white;
+		}
+		.box2>li:nth-child(5){
+			transform:translateX(-131px) translateY(-91px) rotateZ(252deg) translateZ(-432px) rotateX(-62deg);
+			background:url("img/wubgreen.png") no-repeat 50% 50%;
+			color:white;
+		}
+		.box2>li:nth-child(6){
+			transform:translateY(0px) rotateZ(180deg) translateZ(-432px) rotateX(-62deg);
+			background:url("img/wuhe.png") no-repeat 50% 50%;
+			color:white;
+		}
+		
+		
+		.box3>li:nth-child(1){
+			background:url("img/wured.png") no-repeat 50% 50%;
+			color:white;
+		}
+		.box3>li:nth-child(2){
+			transform:translateX(80px) translateY(-244px) rotateZ(35.5deg) rotateX(63deg);
+			background:url("img/wuorange.png") no-repeat 50% 50%;
+			color:white;
+		}
+		.box3>li:nth-child(3){
+			transform:translateX(-81px) translateY(-242px) rotateZ(-35.5deg) rotateX(62deg);
+			background:url("img/wublue.png") no-repeat 50% 50%;
+			color:white;
+		}
+	    .box3>li:nth-child(4){
+			transform:translateX(130px) translateY(-93px) rotateZ(-251.5deg) rotateX(63deg);
+			background:url("img/wugreen.png") no-repeat 50% 50%;
+			color:white;
+		}
+		.box3>li:nth-child(5){
+			transform:translateX(-131px) translateY(-91px) rotateZ(252deg) rotateX(62deg);
+			background:url("img/wuwhite.png") no-repeat 50% 50%;
+			color:black;
+		}
+		.box3>li:nth-child(6){
+			transform:translateY(0px) rotateZ(180deg) rotateX(62deg);
+			background:url("img/wuyellow.png") no-repeat 50% 50%;
+			color:white;
+		}
+		.box4>li:nth-child(1){
+			transform:rotateY(180deg) translateZ(432px);
+			background:url("img/wupurple.png") no-repeat 50% 50%;
+			color:white;
+		}
+		.box4>li:nth-child(2){
+			transform:translateX(80px) translateY(-244px) rotateZ(35.5deg) translateZ(-432px) rotateX(-63deg);
+			background:url("img/wucyan.png") no-repeat 50% 50%;
+			color:white;
+		}
+		.box4>li:nth-child(3){
+			transform:translateX(-81px) translateY(-242px) rotateZ(-35.5deg) translateZ(-432px) rotateX(298deg);
+			background:url("img/wupink.png") no-repeat 50% 50%;
+			color:white;
+		}
+		.box4>li:nth-child(4){
+			transform:translateX(130px) translateY(-93px) rotateZ(-251.5deg) translateZ(-432px) rotateX(-63deg);
+			background:url("img/wublack.png") no-repeat 50% 50%;
+			color:white;
+		}
+		.box4>li:nth-child(5){
+			transform:translateX(-131px) translateY(-91px) rotateZ(252deg) translateZ(-432px) rotateX(-62deg);
+			background:url("img/wubgreen.png") no-repeat 50% 50%;
+			color:white;
+		}
+		.box4>li:nth-child(6){
+			transform:translateY(0px) rotateZ(180deg) translateZ(-432px) rotateX(-62deg);
+			background:url("img/wuhe.png") no-repeat 50% 50%;
+			color:white;
+		}
+		/*.di:hover .box{
+			margin-top:130px;
+			transform:rotateX(0deg) rotateZ(0deg) rotateY(720deg) ;
+		}*/
+
+	</style>
+</head>
+<body>
+	<div class="di">
+	<nav class="box">
+		<ul class="box1">
+			<li>红</li>
+			<li>橙</li>
+			<li>蓝</li>
+			<li>绿</li>
+			<li>白</li>
+			<li>黄</li>
+		</ul>
+		<ul class="box2">
+			<li>紫</li>
+			<li>青</li>
+			<li>粉</li>
+			<li>黑</li>
+			<li>橄</li>
+			<li>棕</li>
+		</ul>
+		<ul class="box3">
+			<li>红</li>
+			<li>橙</li>
+			<li>蓝</li>
+			<li>绿</li>
+			<li>白</li>
+			<li>黄</li>
+		</ul>
+		<ul class="box4">
+			<li>紫</li>
+			<li>青</li>
+			<li>粉</li>
+			<li>黑</li>
+			<li>橄</li>
+			<li>棕</li>
+		</ul>
+		</nav>
+		</div>
+</body>
+<script>
+//   window.onload=function(){
+//   	var box=document.querySelector(".box");
+//   	var a=0;
+//   	var time=setInterval(function(){
+//   			
+//   		a+=20;
+//   		box.style.transform="rotateX(0deg) rotateZ(-20deg) rotateY("+a+"deg)"
+//   		
+//   		
+//   		
+//   		
+//   	},100)
+//   }
+</script>
+<html>
